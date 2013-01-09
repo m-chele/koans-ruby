@@ -29,23 +29,6 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 #
 # Your goal is to write the score method.
 
-def score_ok(dice)
-	return 0 if dice == []
-	counter = Array.new(7, 0)
-	dice.each {|key| counter[key] += 1}
-	
-	result = 0
-	result += 50 * counter[5] if counter[5] < 3
-	result += 50 * (counter[5] - 3) if counter[5] > 3
-	result += 100 * counter[1] if counter[1] < 3
-	result += 100 * (counter[1] - 3) if counter[1] > 3 
-	result += 1000 if(counter[1] == 3)
-	index = counter.find_index {|c| c >= 3 }
-	if(!index.nil? && index != 1)
-		result += (index) * 100
-	end
-	result
-end
 
 def score(dice)
 	return 0 if dice == []
