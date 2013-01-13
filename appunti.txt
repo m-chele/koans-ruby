@@ -109,6 +109,9 @@ procedimento:
 
 **************************************************************
 
+Attributi:
+attr_reader
+attr_accessor
 
 
 

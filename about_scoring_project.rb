@@ -49,6 +49,7 @@ def score(dice)
 	result
 end
 
+
 class AboutScoringProject < EdgeCase::Koan
 	def test_score_of_an_empty_list_is_zero
 		assert_equal 0, score([])
